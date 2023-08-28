@@ -1,3 +1,5 @@
+![Logo do Robocode](/assets/thumbnail.png)
+
 # Robocode CPS 2023
 O robô K-Ray foi desenvolvido para o campeonato Robocode do Centro Paula Souza de 2023
 
