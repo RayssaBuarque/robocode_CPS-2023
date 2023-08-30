@@ -1,4 +1,4 @@
-# Robocode CPS 2023 🤖⚔️
+# Robocode 🤖⚔️ (Torneio CPS 2023)
 O robô K-Ray foi desenvolvido para o [11º torneio Robocode](http://www.robotica.cpscetec.com.br/verEventos.php?pag=50) do Centro Paula Souza, em 2023.
 
 ![Logo do Robocode](/assets/thumbnail.png)
