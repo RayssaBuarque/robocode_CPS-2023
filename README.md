@@ -3,7 +3,7 @@ O robô K-Ray foi desenvolvido para o [11º torneio Robocode](http://www.robotic
 
 ![Logo do Robocode](/assets/thumbnail.png)
 
-- [ ] 🏅 Batalha local da Etec Abdias 
+- [x] 🏅 Batalha local da Etec Abdias 
 - [ ] 🏆 Campeonato do CPS
 
 
