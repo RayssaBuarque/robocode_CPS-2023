@@ -1,8 +1,14 @@
+/*
+EQUIPE KRAY - Etec Abdias do Nascimento
+	Evelyn Alves Oliveira
+ 	Klayvem Guimarães Leal da Silva
+  	Rayssa Buarque Malheiros
+*/
+
 package kray;
 
 import robocode.HitRobotEvent;
 import robocode.Robot;
-// import robocode.ScannedRobotEvent;
 import robocode.*;
 
 import java.awt.*;
@@ -11,15 +17,13 @@ public class Kray extends Robot
 {
 	boolean limite; // Não vire se não houver um robo ali
 	double qtdMovimento; // Quanto se mover
-	double passo = 0;
+	double passo = 0; //Registro de quantos passos até o limite ele já andou
 	String ultimoInimigo = ""; //armazena o nome do último inimigo a nos balear
 
-	/**
-	 * run: mexa-se a contornar as paredes
-	 */
+	//main loop
 	public void run() {
 
-		// Inicialize o robos
+		// Inicialize o robo
 		inicializeRobo();
 		
 		//ande o quanto for necessario pra ficar rente a parede
@@ -29,9 +33,9 @@ public class Kray extends Robot
 		limite = true;
 		turnRight(90);
 
+		// movimente o robo sem parar
 		while (true) {
 			passo = 0;					
-			// movimente o robo
 			movimentos();	
 
 		}
@@ -62,14 +66,14 @@ public class Kray extends Robot
 			fire(1.5);
 			ultimoInimigo = "";
 		}
-		//vira pra direita e pica o pé
+		//o robô vira pra direita e corre
 		turnRight(90);
 		ahead(200);
 		passo += 200;
 		ultimoInimigo = e.getName(); //armazene o nome do meliante
 	} 
 
-	//onHitRobot:  mova-se se tu bater em alguem
+	//onHitRobot:  mova-se se tu bater em alguém
 	@Override
 	public void onHitRobot(HitRobotEvent cicero) {	
 		stop();	
@@ -115,8 +119,7 @@ public class Kray extends Robot
 			//ao atirar, ele dá uns passos pra trás só pra garantir que não vai tomar um tiro de volta		
 			turnRight(90);
 			ahead(-100);
-			passo -= 100;
-		//}else if(distancia <400){ 		
+			passo -= 100; 		
 		}else { 		
 			// Se nossa energia for maior, atire
 			if(nossaEnergia > energiaInimigo){
